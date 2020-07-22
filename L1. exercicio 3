@@ -3,7 +3,7 @@ horas = int(input('Horas: '))
 min = int(input('Minutos: '))
 seg = int(input('Segundos: '))
 
-cal1 = (((((dias * 24)+horas)*60)+min)*60)+seg
-##cal1 = variável utilizada para calcular e converter tudo em segundos.
+resultado = (((((dias * 24)+horas)*60)+min)*60)+seg
+##resultado = variável utilizada para calcular e converter tudo em segundos.
 
-print('Transformando tudo para segundos equivale a ',cal1)
+print('Transformando tudo para segundos equivale a ',resultado)
