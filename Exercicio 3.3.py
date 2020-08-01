@@ -38,4 +38,3 @@ def grid_end():
     do_four(grid)
     line_end()
 grid_end()
-
