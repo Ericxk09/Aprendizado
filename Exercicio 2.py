@@ -1,9 +1,27 @@
-number = int(input("Digite um numero: "))
-x = 1
+def primo(number):
 
-while number > 0:
-    if x % 2 != 0:
-        print(x)
-        number = number - 1
-    x = x + 1
+    primos = 1
+    k = n = 2
+    
+    while k <= n and n <= number:
 
+        if n % k == 0 and n != k:
+            n = n + 1
+            k = 2
+
+        elif n == k:
+            primos = n
+            n = n + 1
+            k = 2
+        else:
+            k = k + 1      
+
+    print(primos)
+
+print("Digite um numero inteiro maior ou igual a 2")
+number = int(input("Digite um Numero: "))
+
+while number < 2:
+    number = int(input("Digite um Numero: "))
+    
+primo(number)
