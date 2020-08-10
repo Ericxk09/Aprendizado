@@ -1,13 +1,10 @@
-soma = number = int(input("Digite um numero: "))
-x = number - 1
+def maximo(a,b):
+    if a > b:
+        print(a)
+    else:
+        print(b)
 
-if number == 0:
-    soma = 1
-    print(soma)
+a = int(input("Digite um numero: "))
+b = int(input("Digite um numero: "))
 
-else:
-    while x > 1:
-        soma = soma * x
-        x = x - 1 
-        
-    print(soma)
+maximo(a,b)
