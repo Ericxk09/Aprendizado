@@ -1,18 +1,19 @@
-def factorial(x):
-    fat_x = 1
-    while x > 1:
-        fat_x = fat_x * x
-        x = x -1
-    return fat_x
-def binominal(a,b):
-    fat_a = factorial(a)
-    fat_b = factorial(b)
-    fat_ab = factorial(a - b)
-    cal_binominal = (fat_a/fat_b*fat_ab)
-    return print(cal_binominal)
+def n_primos(x):
+    n = n1 =  2
+    primo = 0
+    while n <= x:
 
-print("(A!)/(B!*(A-B)!)")
-a = int(input("Informe o valor de A: "))
-b = int(input("Informe o valor de B: "))
+        if n % n1 == 0 and n != n1:
+            n = n + 1
+            n1 = 2
+            
+        elif n == n1:
+            primo = primo + 1
+            n = n + 1
+            n1 = 2
+            
+        else:
+            n1 = n1 + 1
 
-binominal(a,b)
+    return primo
+
