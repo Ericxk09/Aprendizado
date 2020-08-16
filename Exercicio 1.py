@@ -1,25 +1,17 @@
-def width(x):
+def remove_repetidos(lista):
+
+    clone_lista = sorted(lista[:])
     
-    while x > 0:
+    for a in range(len(clone_lista)):
         
-        print('#', end = '')
-        x = x - 1
-    
-    
-def height():
-    print()
-
-
-
-largura = int(input("Digite a largura: "))
-altura = int(input("Digite a altura: "))
-
-while altura > 0:
-    width(largura)
-    height()
-    altura = altura - 1
-
-
-
-
-
+        if a == len(clone_lista)-1:
+            return clone_lista
+        
+        else:
+            for b in range(len(clone_lista)):
+                
+                if clone_lista[a] == clone_lista[a+1]:
+                    del clone_lista[a+1]
+                else:
+                    break
+            
