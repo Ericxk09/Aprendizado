@@ -1,28 +1,31 @@
 import math
 
-a = int(input("A: "))
-b = int(input("B: "))
-c = int(input("C: "))
+def soma_hipotenusas(x):
 
-def valordelta(a,b,c):
-    delta = (b**2)-4*a*c
-    return delta
+    k = 1
+    soma = 0
+    while k <= x :
+        if é_hipotenusa(k) == True:
+            soma = soma + k
+            k = k + 1
+        else:
+            k = k + 1
+    return soma
 
-def raizdelta(delta,a,b):
-    raiz_delta = math.sqrt(delta)
-    x =(-b + raiz_delta)/(2*a)
-    y =(-b - raiz_delta)/(2*a)
-    return x,y
+def é_hipotenusa(x):
 
-delta = valordelta(a,b,c)
-
-if delta > 0:
-    raizes = raizdelta(delta,a,b)
-    print("Possui duas raizes, sendo ",raizes[0],"e",raizes[1])
+    b = c = 1
     
-elif delta == 0:
-    raizes = raizdelta(delta,a,b)
-    print("So possui uma raiz",raizes[0])
+    while x != math.sqrt(b**2+c**2) and b <= x:
 
-else:
-    print("Não possui raizes reais")
+        if b == c:
+            b = b + 1
+            c = 1
+    
+        else:
+            c = c + 1
+    
+    if x == math.sqrt(b**2+c**2):
+        return True
+    else:
+        return False
