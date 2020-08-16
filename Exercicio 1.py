@@ -23,4 +23,3 @@ while altura > 0:
 
 
 
-
