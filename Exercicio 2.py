@@ -1,27 +1,37 @@
-def primo(number):
-
-    primos = 1
-    k = n = 2
+def width(x):
     
-    while k <= n and n <= number:
-
-        if n % k == 0 and n != k:
-            n = n + 1
-            k = 2
-
-        elif n == k:
-            primos = n
-            n = n + 1
-            k = 2
-        else:
-            k = k + 1      
-
-    print(primos)
-
-print("Digite um numero inteiro maior ou igual a 2")
-number = int(input("Digite um Numero: "))
-
-while number < 2:
-    number = int(input("Digite um Numero: "))
+    while x > 0:
+        
+        print('#', end = '')
+        x = x - 1
     
-primo(number)
+    
+def height(x):
+    
+    while x > 0:
+        
+        print(' ', end = '')
+        x = x - 1
+
+largura = int(input("Digite a largura: "))
+altura = int(input("Digite a altura: "))
+
+while altura > 0:
+    width(largura)
+    print()
+    altura = altura  - 1
+    while altura > 1:
+        width(1)
+        height(largura-2)
+        width(1)
+        print()
+        altura = altura - 1
+        
+    width(largura)
+    altura = altura - 1
+
+
+
+
+
+
